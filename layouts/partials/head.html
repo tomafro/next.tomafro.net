@@ -1,1 +1,6 @@
-<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  {{ .Hugo.Generator }}
+  <link href="https://fonts.googleapis.com/css?family=Bitter|Lato:400,400i,700,700i|Roboto+Mono" rel="stylesheet">
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+</head>
