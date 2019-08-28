@@ -5,13 +5,15 @@
         {{ hugo.Generator }}
         {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | resources.ToCSS | resources.Fingerprint }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-        <link href="https://fonts.googleapis.com/css?family=Rubik:500|Merriweather&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,500|Merriweather&display=swap" rel="stylesheet">
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     </head>
     <body>
         <header>
-            <a href="/">tomafro.net</a> | <a href="https://twitter.com/tomafro">twitter</a> | <a
-                href="https://github.com/tomafro">github</a>
+            <a href="/">tomafro.net</a> &mdash;
+            <a href="/about.html">about</a> •
+            <a href="https://twitter.com/tomafro">twitter</a> •
+            <a href="https://github.com/tomafro">github</a>
         </header>
 
         <main>{{- block "main" . }}{{- end }}</main>

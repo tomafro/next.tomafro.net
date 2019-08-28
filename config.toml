@@ -3,10 +3,8 @@ title = "tomafro.net"
 pygmentsUseClasses = true
 uglyurls = true
 
+[permalinks]
+  posts = "/:year/:month/:title/"
+
 [taxonomies]
   tag = "tags"
-
-[params]
-headlineFont = "Bitter"
-bodyFont = "Lato"
-codeFont = "Roboto Mono"
