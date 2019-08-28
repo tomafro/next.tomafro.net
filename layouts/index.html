@@ -1,7 +1,7 @@
 {{ define "main" }}
   <ol>
   {{ range first 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
-    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
   {{ end }}
   </ol>
 {{ end }}
