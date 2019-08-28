@@ -1,0 +1,12 @@
+languageCode = "en-uk"
+title = "tomafro.net"
+pygmentsUseClasses = true
+uglyurls = true
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+headlineFont = "Bitter"
+bodyFont = "Lato"
+codeFont = "Roboto Mono"
