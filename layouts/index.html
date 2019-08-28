@@ -1,7 +1,11 @@
 {{ define "main" }}
-  <ol>
   {{ range first 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
-    <li><a href="{{ .URL }}">{{ .Title }}</a></li>
+    {{ partial "post" . }}
+  {{ end }}
+
+  <ol>
+  {{ range after 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
+    <li><a href="{{ .Params.url }}">{{ .Title }}</a></li>
   {{ end }}
   </ol>
 {{ end }}
