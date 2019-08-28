@@ -1,8 +1,0 @@
-<head>
-  <meta charset="utf-8">
-  {{ hugo.Generator }}
-  {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | resources.ToCSS | resources.Fingerprint }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Lato:400,400i,700,700i|Roboto+Mono" rel="stylesheet">
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-</head>

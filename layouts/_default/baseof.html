@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
+    <head>
+        <meta charset="utf-8">
+        {{ hugo.Generator }}
+        {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | resources.ToCSS | resources.Fingerprint }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:500|Merriweather&display=swap" rel="stylesheet">
+        <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    </head>
     <body>
-        {{- partial "header.html" . -}}
-        {{- block "main" . }}{{- end }}
-        {{- partial "footer.html" . -}}
+        <header>
+            <a href="/">tomafro.net</a> | <a href="https://twitter.com/tomafro">twitter</a> | <a
+                href="https://github.com/tomafro">github</a>
+        </header>
+
+        <main>{{- block "main" . }}{{- end }}</main>
     </body>
 </html>
