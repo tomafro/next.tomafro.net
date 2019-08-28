@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <ol>
+  {{ range first 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
+    <li>{{ .Permalink }}</li>
+  {{ end }}
+  </ol>
+{{ end }}
