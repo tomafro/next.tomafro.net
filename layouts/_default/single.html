@@ -1,0 +1,6 @@
+{{ define "title" }}
+{{ .Page.Title }} &middot; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+{{ partial "post" . }}
+{{ end }}
