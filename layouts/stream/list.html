@@ -4,6 +4,6 @@ Tom Ward's blog
 
 {{ define "main" }}
   {{ range (sort .Pages "File.Path").Reverse }}
-    {{ partial "stream" . }}
+    {{ partial "link" . }}
   {{ end }}
 {{ end }}

@@ -1,3 +1,9 @@
+a
+{{ range .Resources.Match "*" }}
+{{ . }}
+{{ end }}
+b
+
 {{ define "main" }}
-{{ partial "stream" . }}
+{{ partial "link" . }}
 {{ end }}

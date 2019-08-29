@@ -1,6 +1,7 @@
 ---
 title: "Soviet Military Mapping"
 date: 2019-07-27
+category: "stream"
 ---
 <a href="http://blogs.bl.uk/magnificentmaps/2017/02/soviet-military-mapping-of-the-cold-war-era.html">
 <figure>

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+name=$1
+
+mkdir content/links/$1
