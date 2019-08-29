@@ -6,6 +6,7 @@ $base: black;
 $highlight: rgb(0, 84, 168);
 $medium: rgba($highlight, 0.3);
 $soft: rgba($highlight, 0.1);
+$contrast: #fff2e8;
 
 $sans: Rubik, sans-serif;
 $serif: Merriweather, serif;
@@ -108,6 +109,6 @@ code {
   letter-spacing: -1px;
   padding-left: 0.2em;
   padding-right: 0.2em;
-  background: #fff2e8;
+  background: $contrast;
   border-radius: 0.1em;
 }
