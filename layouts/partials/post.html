@@ -1,4 +1,11 @@
 <article>
   <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   {{ .Content }}
+  <footer>
+    <ol class="tags">
+      {{ range .Params.tags }}
+      <li><a href="#">{{ . }}</a></li>
+      {{ end }}
+    </ol>
+  </footer>
 </article>

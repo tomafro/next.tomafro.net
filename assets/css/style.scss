@@ -2,15 +2,27 @@
   -webkit-font-smoothing: antialiased;
 }
 
+$base: black;
+
+$sans: Rubik, sans-serif;
+$serif: Merriweather, serif;
+
 body {
-  font-family: Merriweather, serif;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $base;
+}
+
+body {
+  font-family: $serif;
   font-size: 18px;
   line-height: 28px;
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: Rubik, sans-serif;
+  font-family: $sans;
   font-weight: 500;
 }
 
@@ -19,15 +31,48 @@ h1 {
 }
 
 body > header {
-  font-family: Rubik, sans-serif;
+  font-family: $sans;
   font-weight: 400;
+
   a {
+    color: $base;
     text-decoration: none;
   }
 }
 
-body {
-  max-width: 680px;
-  margin-left: auto;
-  margin-right: auto;
+article {
+  > h1 > a {
+    color: $base;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  footer {
+    font-family: $sans;
+    ol, li {
+      display: inline;
+      padding: 0;
+    }
+
+    li {
+      a {
+        color: $base;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:after {
+        content:" · ";
+      }
+      &:last-child:after {
+        content:"";
+      }
+    }
+  }
 }
