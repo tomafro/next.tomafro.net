@@ -1,10 +1,10 @@
 {{ define "main" }}
-  {{ range first 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
+  {{ range first 5 (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
     {{ partial "post" . }}
   {{ end }}
 
   <ol>
-  {{ range after 5 (where .Site.RegularPages "Type" "post").ByDate.Reverse }}
+  {{ range after 5 (where .Site.RegularPages "Type" "posts").ByDate.Reverse }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
   {{ end }}
   </ol>
