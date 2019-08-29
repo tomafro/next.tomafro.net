@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css?family=Rubik:400,500|Merriweather|Fira+Mono&display=swap" rel="stylesheet">
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     </head>
-    <body>
+    <body class="{{ .Page.Type }}">
         <header>
             <a href="/">Tom Ward's blog</a> &mdash;
             <a href="/about.html">about</a> •
