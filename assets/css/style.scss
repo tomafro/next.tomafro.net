@@ -3,9 +3,13 @@
 }
 
 $base: black;
+$highlight: rgb(0, 84, 168);
+$medium: rgba($highlight, 0.3);
+$soft: rgba($highlight, 0.1);
 
 $sans: Rubik, sans-serif;
 $serif: Merriweather, serif;
+$mono: "Fira Mono", monospace;
 
 body {
   max-width: 680px;
@@ -17,49 +21,71 @@ body {
 body {
   font-family: $serif;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.6em;
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: $sans;
   font-weight: 500;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 1.8em;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+a {
+  color: $highlight;
 }
 
 body > header {
+  color: $medium;
   font-family: $sans;
   font-weight: 400;
+  font-size: 1.2em;
 
   a {
-    color: $base;
+    color: $highlight;
     text-decoration: none;
   }
 }
 
 article {
-  > h1 > a {
-    color: $base;
-    text-decoration: none;
+  margin-top: 4em;
 
-    &:hover {
-      text-decoration: underline;
+  > h1 {
+    > a {
+      color: $base;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+    margin-top: 0;
   }
 
   footer {
     font-family: $sans;
+    font-weight: 400;
+    color: $highlight;
     ol, li {
       display: inline;
       padding: 0;
     }
 
     li {
+      color: $medium;
       a {
-        color: $base;
+        color: $highlight;
         text-decoration: none;
 
         &:hover {
@@ -67,12 +93,21 @@ article {
         }
       }
 
-      &:after {
+      &:before {
         content:" · ";
-      }
-      &:last-child:after {
-        content:"";
       }
     }
   }
+
+  padding-bottom: 1em;
+  border-bottom: 1px solid $soft;
+}
+
+code {
+  font-family: $mono;
+  letter-spacing: -1px;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  background: #fff2e8;
+  border-radius: 0.1em;
 }
