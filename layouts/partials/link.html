@@ -1,3 +1,19 @@
+{{ $category := path.Dir .Dir | singularize }}
+
+{{ $root := index (split .File.Path ".") 0 }}
+
+{{ if fileExists (printf "%s%s" $root ".jpg") }}
+  {{ .Scratch.Set "image" (printf "%s%s" $root ".jpg") }}
+{{ end }}
+
+{{ if fileExists (printf "%s%s" $root ".png") }}
+  {{ .Scratch.Set "image" (printf "%s%s" $root ".png") }}
+{{ end }}
+
 <article data-url="{{ .Permalink }}" data-category="{{ .Params.category }}">
-  {{ .Content }}
+  {{ if eq $category "link" }}
+    {{ .Content }}
+  {{ else }}
+    {{ partial $category . }}
+  {{ end }}
 </article>
