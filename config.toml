@@ -5,6 +5,7 @@ uglyurls = true
 
 [permalinks]
   posts = "/:year/:month/:title/"
+  links = "/:year/:month/:slug"
 
 [taxonomies]
   tag = "tags"

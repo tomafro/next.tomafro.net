@@ -5,7 +5,7 @@ tags: []
 category: "film"
 ---
 {{<link>}}
-  {{<figure img="/stream/hackney-marshes-1978.jpg"
+  {{<figure img="/links/hackney-marshes-1978.jpg"
             caption="Hackney Marshes (1978)">}}
     <span class="quotation">Artist John Smith tells stories about tower block life, editing in bold, unconventional fashion, cutting into the material and highlighting the components and conventions of the film form - yet an intimate portrait of the block's inhabitants still emerges.</span>
   {{</figure>}}
