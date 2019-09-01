@@ -1,0 +1,6 @@
+<a href="{{ .Page.Params.link }}">
+<blockquote>
+  <span class="quotation">{{trim .RawContent "\n" | markdownify | safeHTML }}</span>
+  <cite>{{ .Page.Params.citation | default .Page.Params.title }}</cite>
+</blockquote>
+</a>

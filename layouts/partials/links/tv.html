@@ -2,8 +2,5 @@
   <figure>
     <img src="/{{ .Scratch.Get "image" }}">
     <figcaption>{{ .Page.Params.caption | default .Page.Params.title }}</figcaption>
-    {{if gt (len .Content) 7}}
-    {{ substr .Content 3 -5 | safeHTML }}
-    {{ end }}
   </figure>
 </a>
