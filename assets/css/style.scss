@@ -81,7 +81,7 @@ article {
     margin-top: 0;
   }
 
-  footer {
+  header, footer {
     font-family: $sans;
     font-weight: 400;
     color: $highlight;
@@ -104,6 +104,10 @@ article {
       &:before {
         content:" · ";
       }
+
+      &:first-of-type::before {
+        content:"";
+      }
     }
   }
 
@@ -120,9 +124,12 @@ code {
   border-radius: 0.1em;
 }
 
-body.stream main, body.links main {
+article.bite {
   font-size: 24px;
   line-height: 1.6em;
+  border-bottom: none;
+  margin-top: 4em;
+  padding-bottom: 0;
 
   figure, blockquote {
     margin: 0;
@@ -169,12 +176,6 @@ body.stream main, body.links main {
       max-width: 100%;
       border-radius:  0.1em;
     }
-  }
-
-  article {
-    border-bottom: none;
-    margin-top: 4em;
-    padding-bottom: 0;
   }
 
   .youtube {

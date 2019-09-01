@@ -1,8 +1,8 @@
 <article>
+  <header>{{ partial "elements/date" .Date }}</header>
   <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
   {{ .Content }}
   <footer>
-    {{ partial "elements/date" .Date }}
     <ol class="tags">
       {{ range .Params.tags }}
       <li><a href="#">{{ . }}</a></li>

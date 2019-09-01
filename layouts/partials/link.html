@@ -1,4 +1,4 @@
-{{ $category := path.Dir .Dir | singularize }}
+{{ $category := path.Dir .File.Dir | singularize }}
 
 {{ $root := index (split .File.Path ".") 0 }}
 
@@ -10,7 +10,7 @@
   {{ .Scratch.Set "image" (printf "%s%s" $root ".png") }}
 {{ end }}
 
-<article data-url="{{ .Permalink }}" data-category="{{ .Params.category }}">
+<article class="bite" data-url="{{ .Permalink }}" data-category="{{ .Params.category }}">
   {{ if eq $category "link" }}
     {{ .Content }}
   {{ else }}
