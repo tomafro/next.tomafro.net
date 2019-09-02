@@ -1,4 +1,4 @@
 ---
 title: "Uses"
 ---
-fish, VS Code
+[fish](https://fishshell.com), [VS Code](https://code.visualstudio.com)

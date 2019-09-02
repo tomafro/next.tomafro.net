@@ -3,7 +3,7 @@ Tom Ward's blog
 {{ end }}
 
 {{ define "main" }}
-  {{ range .Pages }}
-    {{ partial "link" . }}
-  {{ end }}
+  {{- range .Pages -}}
+    {{- partial "link" . -}}
+  {{- end -}}
 {{ end }}

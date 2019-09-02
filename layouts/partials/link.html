@@ -1,19 +1,13 @@
-{{ $category := path.Dir .File.Dir | singularize }}
-
-{{ $root := index (split .File.Path ".") 0 }}
-
-{{ if fileExists (printf "%s%s" $root ".jpg") }}
-  {{ .Scratch.Set "image" (printf "%s%s" $root ".jpg") }}
-{{ end }}
-
-{{ if fileExists (printf "%s%s" $root ".png") }}
-  {{ .Scratch.Set "image" (printf "%s%s" $root ".png") }}
-{{ end }}
+{{- $page := "/bites" -}}
+{{- $category := path.Dir .File.Dir | singularize -}}
+{{- $resources := (.Site.GetPage $page).Resources -}}
+{{- $root := index (split .File.Path ".") 0 -}}
+{{- $image := ($resources.ByType "image").GetMatch (printf "%s**" (substr $root (len $page))) -}}
 
 <article class="bite" data-url="{{ .Permalink }}" data-category="{{ .Params.category }}">
-  {{ if eq $category "link" }}
+  {{ if eq $category "bite" }}
     {{ .Content }}
   {{ else }}
-    {{ partial $category . }}
-  {{ end }}
+    {{- partial $category (merge .Params (dict "page" . "image" $image )) -}}
+  {{- end -}}
 </article>

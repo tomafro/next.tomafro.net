@@ -1,6 +1,5 @@
 ---
 title: "About me"
-date: 2019-07-29T15:50:46+01:00
 ---
 I'm a London based software developer, passionate about building and improving the web.
 
