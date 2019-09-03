@@ -1,0 +1,6 @@
+<a href="{{ .link }}">
+  <figure>
+    {{ partial "elements/img" (dict "image" .image "title" .title "alt" .title) }}
+    <figcaption>{{ .caption | default .title }}</figcaption>
+  </figure>
+</a>

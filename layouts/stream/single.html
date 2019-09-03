@@ -1,9 +1,0 @@
-a
-{{ range .Resources.Match "*" }}
-{{ . }}
-{{ end }}
-b
-
-{{ define "main" }}
-{{ partial "link" . }}
-{{ end }}

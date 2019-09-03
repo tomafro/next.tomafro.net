@@ -1,9 +1,0 @@
-<a href="{{ .link }}">
-  <figure>
-    <img src="/{{ .image.Permalink }}">
-    <figcaption>{{ .caption | default .title }}</figcaption>
-    {{ if gt (len .page.Content) 7}}
-    {{ substr .page.Content 3 -5 | safeHTML }}
-    {{ end }}
-  </figure>
-</a>

@@ -1,9 +1,0 @@
-{{ define "title" }}
-Tom Ward's blog
-{{ end }}
-
-{{ define "main" }}
-  {{ range (sort .Pages "File.Path").Reverse }}
-    {{ partial "link" . }}
-  {{ end }}
-{{ end }}

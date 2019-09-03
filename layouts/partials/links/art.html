@@ -1,6 +1,6 @@
 <a href="{{ .link }}">
 <figure>
-  <img src="/{{ .image.Permalink }}" title="{{ .title }}" alt="{{ .title }} by {{ .artist }}">
+  {{ partial "elements/img" (dict "image" .image "title" .title "alt" (printf "%s by %s" .title .artist)) }}
   <figcaption>{{ .title }} &mdash; {{ .artist }}, {{ .year }}</figcaption>
 </figure>
 </a>

@@ -3,9 +3,11 @@ title = "Tom Ward's blog"
 pygmentsUseClasses = true
 uglyurls = true
 
+disableKinds = ["RSS"]
+
 [permalinks]
   posts = "/:year/:month/:title/"
   links = "/:year/:month/:slug"
 
 [taxonomies]
-  tag = "tags"
+#  tag = "tags"

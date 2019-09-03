@@ -1,0 +1,13 @@
+{{ define "main" }}
+"{{ .Section }}"<br/>
+"{{ (.Site.GetPage "/links").Resources.ByType "page" }}"<br/>
+"{{ .Content }}"<br/>
+r
+{{ range .Data }}
+{{ . }} "<br />
+{{ end }}
+r
+{{- range (.Site.GetPage "/links").Resources.ByType "page" -}}
+{{- partial "link" . -}}
+{{- end -}}
+{{ end }}
