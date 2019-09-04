@@ -1,7 +1,7 @@
 ---
 title: "Brazilian Termites From Space"
 citation: "The Atlantic"
-date: 2019-08-29T22:51:44+01:00
+date: 2019-03-12
 tags: []
 link: "https://www.theatlantic.com/science/archive/2018/11/brazil-termite-murundus-mounds-space-4000-years-old/576160/"
 ---

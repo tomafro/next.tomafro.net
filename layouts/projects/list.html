@@ -3,5 +3,11 @@ Tom Ward's blog
 {{ end }}
 
 {{ define "main" }}
-Hello There
+  <h1>Projects</h1>
+  {{ range .Pages }}
+  <section>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Params.description }}</p>
+  </section>
+  {{ end }}
 {{ end}}

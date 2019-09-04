@@ -1,6 +1,3 @@
-layouts/_default/single.html
-
-{{ .Page.Type }}
-{{ .Page.Resources }}
-{{ .Page.Kind }}
-{{ .Page.Section }}
+{{ define "main" }}
+{{ .Content }}
+{{ end }}
