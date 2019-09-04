@@ -1,1 +1,1 @@
-<img src="/{{ .image.Permalink }}" title="{{ .title }}" alt="{{ .alt }}" loading="lazy">
+<img src="/{{ .image.Permalink }}" data-dimensions="{{ .image.Width }}x{{ .image.Height }}" title="{{ .title }}" alt="{{ .alt | default .title }}" loading="lazy">

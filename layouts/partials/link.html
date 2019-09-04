@@ -1,15 +1,15 @@
 {{ if .File }}
-{{- $page := "/links" -}}
-{{- $category := path.Dir .File.Dir | singularize -}}
-{{- $resources := (.Site.GetPage $page).Resources -}}
-{{- $root := index (split .File.Path ".") 0 -}}
-{{- $image := ($resources.ByType "image").GetMatch (printf "%s**" (substr $root (len $page))) -}}
+{{- $link := merge .Params (dict "page" .) }}
+{{- $link := merge $link (dict "category" (path.Dir .File.Dir | singularize)) -}}
+{{- $link := merge $link (dict "root" (index (split .File.Path ".") 0 )) -}}
+{{- $link := merge $link (dict "slug" (substr $link.root (len "links/"))) -}}
+{{- $link := merge $link (dict "category" (path.Dir .File.Dir | singularize)) -}}
 
-<article class="link" data-category="{{ $category }}">
-  {{ if eq $category "bite" }}
-    {{ .Content }}
-  {{ else }}
-    {{- partial $category (merge .Params (dict "page" . "image" $image )) -}}
-  {{- end -}}
+{{- $page := "/links" -}}
+{{- $images := (.Site.GetPage $page).Resources.ByType "image" -}}
+{{- $link := merge $link (dict "image" ($images.GetMatch (printf "%s**" (substr $link.root (len $page))))) -}}
+
+<article id="{{ $link.slug }}" class="link" data-category="{{ $link.category }}">
+  {{- partial $link.category $link -}}
 </article>
 {{ end }}
