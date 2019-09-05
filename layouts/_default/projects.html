@@ -3,7 +3,7 @@ Tom Ward's blog
 {{ end }}
 
 {{ define "main" }}
-<h1>Projects</h1>
+<h1>Recent projects</h1>
   {{- range (.Site.GetPage "/projects").Resources.ByType "page" -}}
   {{- partial "project" . -}}
   {{- end -}}
