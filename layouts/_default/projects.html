@@ -2,6 +2,8 @@
 Tom Ward's blog
 {{ end }}
 
+{{ define "body-class" }}projects{{ end }}
+
 {{ define "main" }}
 <h1>Recent projects</h1>
   {{- range (.Site.GetPage "/projects").Resources.ByType "page" -}}
