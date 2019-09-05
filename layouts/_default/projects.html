@@ -6,7 +6,11 @@ Tom Ward's blog
 
 {{ define "main" }}
 <h1>Recent projects</h1>
-  {{- range (.Site.GetPage "/projects").Resources.ByType "page" -}}
+<ol>
+{{- range (.Site.GetPage "/projects").Resources.ByType "page" -}}
+<li>
   {{- partial "project" . -}}
-  {{- end -}}
+</li>
+{{- end -}}
+</ol>
 {{ end}}

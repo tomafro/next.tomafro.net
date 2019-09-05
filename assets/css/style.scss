@@ -25,21 +25,28 @@ body > header {
     &:last-of-type::after {
       content: "";
     }
+
+    a {
+      background: none;
+    }
   }
 }
 
-main > h1 {
+h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
-  @include black-uppercase();
+}
+
+h2 {
+  font-size: 1em;
 }
 
 p {
   margin-bottom: 1em;
 }
 
-p > a {
-  @include highlighted-link();
+ol li {
+  list-style-type: disc;
 }
 // @mixin media-border {
 //   border-radius: 0.2em;
