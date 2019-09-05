@@ -4,12 +4,13 @@ body > header {
   font-size: 1.1em;
 
   @include black-uppercase();
-  background-color:  rgba(0, 255, 255, 0.3);
+  background-color:  black;
+  color: white;
   padding-left: 100em;
   margin-left: -100em;
   padding-right: 100em;
   margin-right: -100em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 
   li {
     display: inline;
@@ -28,6 +29,13 @@ body > header {
 
     a {
       background: none;
+
+      &:hover {
+        color: black;
+        background: white;
+        border-radius: 0;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -48,6 +56,7 @@ p {
 ol li {
   list-style-type: disc;
 }
+
 // @mixin media-border {
 //   border-radius: 0.2em;
 //   border: 2px solid black;
