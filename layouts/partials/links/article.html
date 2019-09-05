@@ -1,6 +1,1 @@
-<a href="{{ .link }}">
-<blockquote>
-  <span class="quotation">{{trim .page.RawContent "\n" | markdownify | safeHTML }}</span>
-  <cite>{{ .citation | default .title }}</cite>
-</blockquote>
-</a>
+{{trim .page.RawContent "\n" | markdownify | safeHTML }}

@@ -6,6 +6,7 @@
         {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | resources.ToCSS | resources.Fingerprint }}
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
         <link href="https://fonts.googleapis.com/css?family=Rubik:500,700|Merriweather|Fira+Mono&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6da83d860a.js"></script>
         <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     </head>
     <body class="{{ block "body-class" . }}{{ end }}">

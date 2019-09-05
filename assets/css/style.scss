@@ -57,6 +57,15 @@ ol li {
   list-style-type: disc;
 }
 
+ul {
+  list-style-type: none;
+
+  li {
+    position: relative;
+    margin-bottom: 1em;
+  }
+}
+
 // @mixin media-border {
 //   border-radius: 0.2em;
 //   border: 2px solid black;

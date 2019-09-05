@@ -1,5 +1,8 @@
+{{ define "body-class" }}links{{ end }}
 {{ define "main" }}
+<ul>
 {{- range (.Site.GetPage "/links").Resources.ByType "page" -}}
-{{- partial "link" . -}}
+<li>{{- partial "link" . -}}</li>
 {{- end -}}
+</ul>
 {{ end }}

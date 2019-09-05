@@ -3,13 +3,12 @@
 {{- $link := merge $link (dict "category" (path.Dir .File.Dir | singularize)) -}}
 {{- $link := merge $link (dict "root" (index (split .File.Path ".") 0 )) -}}
 {{- $link := merge $link (dict "slug" (substr $link.root (len "links/"))) -}}
-{{- $link := merge $link (dict "category" (path.Dir .File.Dir | singularize)) -}}
 
 {{- $page := "/links" -}}
 {{- $images := (.Site.GetPage $page).Resources.ByType "image" -}}
 {{- $link := merge $link (dict "image" ($images.GetMatch (printf "%s**" (substr $link.root (len $page))))) -}}
 
-<article id="{{ $link.slug }}" class="link" data-category="{{ $link.category }}">
-  {{- partial $link.category $link -}}
-</article>
+{{- $icons := dict "book" "fad fa-book" "art" "fas fa-palette" "tv" "fad fa-tv-retro" "article" "fad fa-newspaper" "film" "fad fa-film" }}
+<span class="fa-li"><i class="{{ index $icons (substr $link.category (len "links/")) | default "fas fa-globe-europe" }}"></i></span><h2><a href="{{ $link.link }}">{{ $link.title }}</a></h2>
+{{- partial $link.category $link -}}
 {{ end }}
