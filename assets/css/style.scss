@@ -6,7 +6,7 @@ body > header {
   @include black-uppercase();
   background-color:  black;
   color: white;
-  margin-bottom: 3em;
+  margin-bottom: 2rem;
 
   li {
     display: inline;
@@ -38,7 +38,7 @@ body > header {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 h2 {
