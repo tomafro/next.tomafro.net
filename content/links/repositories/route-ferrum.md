@@ -1,5 +1,5 @@
 ---
-title: "route/ferrum"
+title: "ferrum"
 date: 2019-09-06
 link: "https://github.com/route/ferrum"
 ---
