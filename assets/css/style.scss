@@ -59,6 +59,54 @@ ul {
   li {
     position: relative;
     margin-bottom: 1em;
+
+    .fa-li a {
+      background: inherit;
+
+      &:hover {
+        background: black;
+        color: white;
+      }
+    }
+
+    h2 {
+      display: inline;
+    }
+  }
+}
+
+blockquote {
+  cite {
+    display: block;
+    text-align: right;
+
+    a {
+      font-style: normal;
+      @include black-uppercase();
+    }
+
+    &::before {
+      content: "— ";
+    }
+  }
+}
+
+figure {
+  text-align: center;
+  max-width: ($width / 2) - 0.5rem;
+
+  img {
+    max-width: ($width / 2) - 0.5rem;
+    max-height: ($width / 2) - 0.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid black;
+  }
+
+  figcaption {
+    a {
+      font-style: normal;
+      @include black-uppercase();
+    }
   }
 }
 

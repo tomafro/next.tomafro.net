@@ -1,1 +1,4 @@
-{{trim .page.RawContent "\n" | markdownify | safeHTML }}
+<blockquote>
+{{ .content }}
+<cite><a href="{{ .link }}">{{ .title }}</a></cite>
+</blockquote>
