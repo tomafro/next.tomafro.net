@@ -58,7 +58,7 @@ ul {
 
   li {
     position: relative;
-    margin-bottom: 1em;
+    margin-bottom: 2rem;
 
     .fa-li a {
       background: inherit;
@@ -93,13 +93,14 @@ blockquote {
 
 figure {
   text-align: center;
-  max-width: ($width / 2) - 0.5rem;
+  max-width: 32rem;
 
   img {
-    max-width: ($width / 2) - 0.5rem;
-    max-height: ($width / 2) - 0.5rem;
+    max-width: 100%;
+    max-height: 32rem;
     margin-right: 0.5rem;
     border: 1px solid black;
+    vertical-align: text-top;
   }
 
   figcaption {

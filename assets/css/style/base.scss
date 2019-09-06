@@ -42,7 +42,7 @@ body {
   margin-right: $margin;
 }
 
-@media (min-width:calc(#{$width} + #{$margin} + #{$margin})) {
+@media (min-width:#{$width + $margin + $margin}) {
   .column {
     margin-left: auto;
     margin-right: auto;
