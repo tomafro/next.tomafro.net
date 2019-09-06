@@ -6,10 +6,6 @@ body > header {
   @include black-uppercase();
   background-color:  black;
   color: white;
-  padding-left: 100em;
-  margin-left: -100em;
-  padding-right: 100em;
-  margin-right: -100em;
   margin-bottom: 3em;
 
   li {

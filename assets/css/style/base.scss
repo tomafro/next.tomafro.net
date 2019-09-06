@@ -32,16 +32,18 @@ $highlight: rgb(180, 255, 255);
 }
 
 body {
-  max-width: $width;
-  margin-left: $margin;
-  margin-right: $margin;
-
   font-family: Merriweather, serif;
   line-height: 1.8rem;
 }
 
+.column {
+  max-width: $width;
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
 @media (min-width:calc(#{$width} + #{$margin} + #{$margin})) {
-  body {
+  .column {
     margin-left: auto;
     margin-right: auto;
   }

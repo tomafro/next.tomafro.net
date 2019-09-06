@@ -11,13 +11,19 @@
     </head>
     <body class="{{ block "body-class" . }}{{ end }}">
         <header>
-            <ul>
-                <li><a class="home" href="/">Tom Ward</a></li>
-                <li><a href="/projects.html">projects</a></li>
-                <li><a href="https://twitter.com/tomafro">@twitter</a></li>
-                <li><a href="https://github.com/tomafro">@github</a></li>
-            </ul>
+            <div class="column">
+                <ul>
+                    <li><a class="home" href="/">Tom Ward</a></li>
+                    <li><a href="/projects.html">projects</a></li>
+                    <li><a href="https://twitter.com/tomafro">@twitter</a></li>
+                    <li><a href="https://github.com/tomafro">@github</a></li>
+                </ul>
+            </div>
         </header>
-        <main>{{- block "main" . }}{{- end }}</main>
+        <main>
+            <div class="column">
+                {{- block "main" . }}{{- end }}
+            </div>
+        </main>
     </body>
 </html>
