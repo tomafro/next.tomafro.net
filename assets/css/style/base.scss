@@ -1,5 +1,5 @@
-$width: 680px;
-$margin: 8px;
+$width: 40rem;
+$margin: 2rem;
 
 $highlight: rgb(180, 255, 255);
 
@@ -26,6 +26,7 @@ $highlight: rgb(180, 255, 255);
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
   color: inherit;
   text-decoration: inherit;
 }
@@ -36,8 +37,7 @@ body {
   margin-right: $margin;
 
   font-family: Merriweather, serif;
-  font-size: 18px;
-  line-height: 1.8em;
+  line-height: 1.8rem;
 }
 
 @media (min-width:calc(#{$width} + #{$margin} + #{$margin})) {
