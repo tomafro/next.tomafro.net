@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         {{ hugo.Generator }}
         {{ $style := resources.Get "css/style.scss" | resources.ExecuteAsTemplate "css/style.scss" . | resources.ToCSS | resources.Fingerprint }}
-        <meta name="viewport" content="width=500">
+        <meta name="viewport" content="width=520">
         <meta name="Description" content="Tom Ward's personal blog, with projects, links, and more">
         <link rel="stylesheet" href="{{ $style.RelPermalink }}">
         <link href="https://fonts.googleapis.com/css?family=Rubik:500,700|Merriweather|Fira+Mono&display=swap" rel="stylesheet">
