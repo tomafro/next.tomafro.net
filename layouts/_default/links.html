@@ -1,6 +1,6 @@
 {{ define "body-class" }}links{{ end }}
 {{ define "main" }}
-<ul>
+<ul class="with-icons">
 {{- range (.Site.GetPage "/links").Resources.ByType "page" -}}
 <li>{{- partial "link" . -}}</li>
 {{- end -}}

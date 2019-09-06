@@ -49,11 +49,7 @@ p {
   margin-bottom: 1rem;
 }
 
-ol li {
-  list-style-type: disc;
-}
-
-ul {
+ul.with-icons, ol.with-icons {
   list-style-type: none;
 
   li {
