@@ -4,6 +4,8 @@ pygmentsUseClasses = true
 uglyurls = true
 
 disableKinds = ["RSS"]
+[params]
+  mainSections = ["posts", "links"]
 
 [permalinks]
   posts = "/:year/:month/:title/"
