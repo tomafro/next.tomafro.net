@@ -8,7 +8,17 @@ body > header {
   color: white;
   margin-bottom: 2rem;
 
-  li {
+  .column {
+    display: flex;
+  }
+
+  ul.site-links {
+    display: inline;
+    align-self: flex-start;
+    flex-grow: 1;
+  }
+
+  ul.site-links li {
     display: inline;
 
     &::after {
@@ -23,6 +33,7 @@ body > header {
       content: "";
     }
 
+
     a {
       background: none;
       padding-left: 0.1em;
@@ -34,6 +45,25 @@ body > header {
         background: rgb(180, 255,  255);
         border-radius: 0;
         text-decoration: none;
+      }
+    }
+  }
+
+  ul.social-links {
+    display: inline;
+    align-self: flex-end;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      color: white;
+      background: inherit;
+      border-radius: 0;
+      text-decoration: none;
+      &:hover {
+        color: $highlight;
       }
     }
   }
