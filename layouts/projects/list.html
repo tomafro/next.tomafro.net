@@ -2,12 +2,15 @@
 Tom Ward's blog
 {{ end }}
 
+{{ define "body-class" }}projects{{ end }}
+
 {{ define "main" }}
-  <h1>Projects</h1>
+<h1>Recent projects</h1>
+<ol class="with-icons">
   {{ range .Pages }}
-  <section>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>{{ .Params.description }}</p>
-  </section>
-  {{ end }}
+  <li>
+    <span class="fa-li"><i class="fad fa-code-branch"></i></span>{{- partial "project" . -}}
+  </li>
+  {{- end -}}
+</ol>
 {{ end}}
