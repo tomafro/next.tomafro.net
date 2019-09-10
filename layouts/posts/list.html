@@ -2,15 +2,15 @@
 Tom Ward's blog
 {{ end }}
 
-{{ define "body-class" }}links{{ end }}
+{{ define "body-class" }}posts{{ end }}
 
 {{ define "main" }}
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "links") 50 }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "posts") 50 }}
 {{ template "_internal/pagination.html" . }}
 <ol class="with-icons">
   {{ range $paginator.Pages }}
   <li>
-    {{ partial "link" . }}
+    {{ partial "post" . }}
   </li>
   {{ end }}
 </ol>

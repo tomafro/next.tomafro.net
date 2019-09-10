@@ -85,7 +85,7 @@ body > header {
 
 h1 {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  line-height: 3rem;
 }
 
 h2 {
@@ -162,5 +162,25 @@ pre {
   border-radius: 0.1rem;
 }
 
-pre {
+article header {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-align: right;
+
+  time {
+    background: linear-gradient(98deg, rgba($highlight-b, 0) 0.2em, $highlight-b 0.6em, $highlight-b calc(100% - 0.6em), rgba($highlight-b, 0) calc(100% - 0.2em));
+    @include black-uppercase();
+    font-weight: 500;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+article footer {
+  ol.tags li {
+    display: inline;
+    margin-right: 0.5em;
+  }
 }
