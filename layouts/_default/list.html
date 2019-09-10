@@ -3,13 +3,6 @@ Tom Ward's blog
 {{ end }}
 
 {{ define "body-class" }}projects{{ end }}
-
 {{ define "main" }}
-<ol class="with-icons">
-  {{ range (where .RegularPages "Type" "in" site.Params.mainSections) }}
-  <li>
-    {{- partial (singularize .Type) . -}}
-  </li>
-  {{- end -}}
-</ol>
+{{ (.Site.GetPage "about").Content }}
 {{ end}}
