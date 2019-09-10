@@ -1,0 +1,17 @@
+{{ define "title" }}
+Tom Ward's blog
+{{ end }}
+
+{{ define "body-class" }}projects{{ end }}
+
+{{ define "main" }}
+{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "links") 50 }}
+{{ template "_internal/pagination.html" . }}
+<ol class="with-icons">
+  {{ range $paginator.Pages }}
+  <li>
+    {{ partial "link" . }}
+  </li>
+  {{ end }}
+</ol>
+{{ end}}

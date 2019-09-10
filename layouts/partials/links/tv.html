@@ -1,2 +1,7 @@
+
+{{ if .image }}
 <figure><img src="{{ .image.Permalink }}"><figcaption><a href="{{ .link }}">{{ .title }}</a></figcaption>
 </figure>
+{{ else }}
+{{ .page.Content }}
+{{ end }}

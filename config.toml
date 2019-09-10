@@ -1,11 +1,12 @@
 languageCode = "en-uk"
 title = "Tom Ward's blog"
 pygmentsUseClasses = true
+pygmentsCodeFences = true
 uglyurls = true
 
 disableKinds = ["RSS"]
 [params]
-  mainSections = ["posts", "links"]
+  mainSections = ["links"]
 
 [permalinks]
   posts = "/:year/:month/:title/"
