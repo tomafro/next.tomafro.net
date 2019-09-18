@@ -11,6 +11,8 @@ $highlight-b: rgb(255, 255, 180);
   --main-highlight-colour: rgb(180, 255, 255);
   --main-highlight-colour-0: rgba(180, 255, 255, 0);
   --second-highlight-colour: rgb(255, 255, 180);
+
+  font-size: 18px;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -53,7 +55,7 @@ $highlight-b: rgb(255, 255, 180);
 
 body {
   font-family: Merriweather, serif;
-  font-size: 12pt;
+  font-size: 1rem;
   line-height: 1.8rem;
   color: var(--colour);
   background-color: var(--background-colour);
