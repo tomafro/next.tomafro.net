@@ -7,7 +7,7 @@ Tom Ward's blog
 {{ define "main" }}
 {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "links") 50 }}
 {{ template "_internal/pagination.html" . }}
-<ol class="with-icons">
+<ol class="links with-icons">
   {{ range $paginator.Pages }}
   <li>
     {{ partial "link" . }}
