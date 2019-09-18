@@ -6,17 +6,18 @@ $highlight-b: rgb(255, 255, 180);
 
 :root {
   --colour: black;
+  --body-link-colour: black;
   --background-colour: white;
   --main-highlight-colour: rgb(180, 255, 255);
   --main-highlight-colour-0: rgba(180, 255, 255, 0);
   --second-highlight-colour: rgb(255, 255, 180);
 }
 
-
 // @media (prefers-color-scheme: dark) {
 //   :root {
 //     --colour: white;
 //     --background-colour: black;
+//     --body-link-colour: black;
 //   }
 // }
 
@@ -82,9 +83,12 @@ a {
   margin-right: -0.50em;
 }
 
+main a {
+  color: var(--body-link-colour);
+}
+
 p  a  {
   font-weight: 500;
-
   background: linear-gradient(98deg, rgba($highlight-b, 0) 0.2em, $highlight-b 0.6em, $highlight-b calc(100% - 0.6em), rgba($highlight-b, 0) calc(100% - 0.2em));
   &:hover {
     background: linear-gradient(98deg, rgba($highlight-a, 0) 0.2em, $highlight-a 0.6em, $highlight-a calc(100% - 0.6em), rgba($highlight-a, 0) calc(100% - 0.2em));
