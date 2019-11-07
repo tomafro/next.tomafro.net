@@ -1,0 +1,8 @@
+[package]
+name = "tomafro-net" # the name of the package
+version = "0.1.0"    # the current version, obeying semver
+authors = ["Tom Ward <tom@popdog.net>"]
+edition = '2018'
+[[bin]]
+name="rust-for-rubyists-ex-1"
+path="content/posts/rust-for-rubyists-ex-1.rs"
