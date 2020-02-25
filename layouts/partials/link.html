@@ -7,7 +7,7 @@
 
 {{- $images := (.Site.GetPage (pluralize $link.category)).Resources.ByType "image" -}}
 {{- $link := merge $link (dict "image" ($images.GetMatch (printf "%s**" .File.BaseFileName))) -}}
-{{- $icons := dict "book" "fad fa-book" "art" "fas fa-palette" "tv" "fad fa-tv-retro" "quote" "fas fa-quote-left" "film" "fad fa-film" "misc" "fab fa-youtube" "repository" "fad fa-code-branch"}}
+{{- $icons := dict "book" "fad fa-book" "art" "fas fa-palette" "tv" "fad fa-tv-retro" "quote" "fas fa-quote-left" "film" "fad fa-film" "misc" "fab fa-youtube" "repository" "fad fa-code-branch" "song" "fad fa-music"}}
 <span class="fa-li"><i class="{{ $link.icon | default (index $icons (substr $link.category (len "links/"))) | default "fas fa-globe-europe" }}"></i></span>
 {{- partial $link.category $link -}}
 {{ end }}
